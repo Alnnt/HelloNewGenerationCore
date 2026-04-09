@@ -1,0 +1,21 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "org.cn_good_grass.hello_new_generation_core.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "hello_new_generation_core.refmap.json",
+  "mixins": [
+    "MixinDeployerBlockEntity",
+    "cbc.MixinBigCannonBlock",
+    "cbc.MixinBigCannonBlockItem",
+    "cbcmw.MixinCompactCannonMountPoint"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
