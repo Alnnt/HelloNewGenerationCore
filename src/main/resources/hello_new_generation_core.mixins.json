@@ -6,9 +6,18 @@
   "refmap": "hello_new_generation_core.refmap.json",
   "mixins": [
     "MixinDeployerBlockEntity",
-    "cbc.MixinBigCannonBlock",
+    "cbc.MixinAutocannonBaseBlock",
+    "cbc.MixinAutocannonBlockItem",
+    "cbc.MixinBigCannonBaseBlock",
     "cbc.MixinBigCannonBlockItem",
-    "cbcmw.MixinCompactCannonMountPoint"
+    "cbcmw.MixinCompactCannonMountPoint",
+    "cbcmw.MixinMediumcannonBaseBlock",
+    "cbcmw.MixinMediumcannonBlockItem",
+    "cbcmw.MixinMunitionsLauncherBaseBlock",
+    "cbcmw.MixinLauncherSlidingBreechBlock",
+    "cbcmw.MixinMunitionsLauncherBlockItem",
+    "cbcmw.MixinRotarycannonBaseBlock",
+    "cbcmw.MixinRotarycannonBlockItem"
   ],
   "client": [
   ],

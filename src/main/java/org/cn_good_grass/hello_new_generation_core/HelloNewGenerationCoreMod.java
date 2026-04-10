@@ -17,7 +17,6 @@ public class HelloNewGenerationCoreMod {
     public HelloNewGenerationCoreMod(FMLJavaModLoadingContext modLoadingContext) {
         MinecraftForge.EVENT_BUS.register(this);
 
-
         IEventBus modEventBus = modLoadingContext.getModEventBus();
 
         eventRegister();

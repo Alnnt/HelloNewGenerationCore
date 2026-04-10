@@ -15,6 +15,7 @@ import rbasamoyai.createbigcannons.cannon_control.fixed_cannon_mount.FixedCannon
 import rbasamoyai.createbigcannons.cannons.big_cannons.breeches.quickfiring_breech.CannonMountPoint;
 import riftyboi.cbcmodernwarfare.cannon_control.compact_mount.CompactCannonMountBlockEntity;
 import riftyboi.cbcmodernwarfare.cannon_control.compact_mount.ExtendsCompactCannonMount;
+import riftyboi.cbcmodernwarfare.index.CBCModernWarfareBlocks;
 
 @Mixin({CannonMountPoint.class})
 public abstract class MixinCompactCannonMountPoint extends ArmInteractionPoint {
