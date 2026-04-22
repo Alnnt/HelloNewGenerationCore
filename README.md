@@ -1,2 +1,1 @@
-Power\
-Welcome to Power mod!\
+HelloNewGenerationCoreMod
