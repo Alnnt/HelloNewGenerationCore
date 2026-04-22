@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-11T02:27:17.3950586	Tags for minecraft:item mod id no_cat
-c2e8c99bcdfe4a4872f7a8db03463d4ede2a2fb3 data/no_cat/tags/items/tce_35_40.json
-0db42dad97fb93c4b7cb2aec7a24b15e385f5ac1 data/no_cat/tags/items/tce_57_66.json
-32ae15787c811f4473d0a90b346387ef3370c1ab data/no_cat/tags/items/tce_97_99.json
+// 1.20.1	2026-02-11T02:27:17.3950586	Tags for minecraft:item mod id power
+c2e8c99bcdfe4a4872f7a8db03463d4ede2a2fb3 data/power/tags/items/tce_35_40.json
+0db42dad97fb93c4b7cb2aec7a24b15e385f5ac1 data/power/tags/items/tce_57_66.json
+32ae15787c811f4473d0a90b346387ef3370c1ab data/power/tags/items/tce_97_99.json

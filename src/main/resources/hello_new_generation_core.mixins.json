@@ -1,23 +1,11 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "org.cn_good_grass.hello_new_generation_core.mixin",
+  "package": "org.cn_grass_block.hello_new_generation_core.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "hello_new_generation_core.refmap.json",
+  "refmap": "power.refmap.json",
   "mixins": [
-    "MixinDeployerBlockEntity",
-    "cbc.MixinAutocannonBaseBlock",
-    "cbc.MixinAutocannonBlockItem",
-    "cbc.MixinBigCannonBaseBlock",
-    "cbc.MixinBigCannonBlockItem",
-    "cbcmw.MixinCompactCannonMountPoint",
-    "cbcmw.MixinMediumcannonBaseBlock",
-    "cbcmw.MixinMediumcannonBlockItem",
-    "cbcmw.MixinMunitionsLauncherBaseBlock",
-    "cbcmw.MixinLauncherSlidingBreechBlock",
-    "cbcmw.MixinMunitionsLauncherBlockItem",
-    "cbcmw.MixinRotarycannonBaseBlock",
-    "cbcmw.MixinRotarycannonBlockItem"
+
   ],
   "client": [
   ],

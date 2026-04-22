@@ -7,8 +7,7 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 authors = "${mod_authors}"
 description = '''${mod_description}'''
-side = "BOTH"
-logoFile = ""
+logoFile = "../assets/hello_new_generation_core/icon.png"
 
 
 [[dependencies."${mod_id}"]]
