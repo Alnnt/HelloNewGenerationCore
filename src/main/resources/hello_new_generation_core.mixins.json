@@ -5,7 +5,12 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "power.refmap.json",
   "mixins": [
-
+    "MixinDeployerBlockEntity",
+    "cbc.MixinAutocannonBaseBlock",
+    "cbc.MixinAutocannonBlockItem",
+    "cbc.MixinBigCannonBaseBlock",
+    "cbc.MixinBigCannonBlockItem",
+    "minecraft.MixinBlock"
   ],
   "client": [
   ],

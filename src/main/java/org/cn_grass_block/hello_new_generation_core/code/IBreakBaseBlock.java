@@ -6,6 +6,7 @@ import net.minecraft.world.Containers;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.BlockGetter;
@@ -14,9 +15,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraftforge.common.ForgeHooks;
+
+import java.util.List;
 
 public class IBreakBaseBlock {
+    public static List<Tier> canBreak = List.of(Tiers.DIAMOND, Tiers.NETHERITE);
+
     public static void playerWillDestroy(Level level, BlockPos blockPos, BlockState blockState, Player player) {
         if (player != null) {
             level.levelEvent(player, 2001, blockPos, Block.getId(blockState));
@@ -24,7 +28,7 @@ public class IBreakBaseBlock {
 
             boolean break_pass = false;
             if (player.getMainHandItem().getItem() instanceof TieredItem tiered)
-                break_pass = tiered.getTier().() >= Tiers.DIAMOND.getLevel();
+                break_pass = canBreak.contains(tiered.getTier());
             if (!player.isCreative() && break_pass)
                 Containers.dropItemStack(level, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, new ItemStack(blockState.getBlock()));
 
@@ -34,14 +38,16 @@ public class IBreakBaseBlock {
 
     public static float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         boolean break_pass = false;
-        if (player.getMainHandItem().getItem() instanceof TieredItem tiered) break_pass =  tiered.getTier().getLevel() >= Tiers.DIAMOND.getLevel();
+        float break_speed = 0;
 
-        float break_speed;
-        float f = state.getDestroySpeed(level, pos);
-        if (f == -1.0F) {
-            break_speed = 0.0F;
-        } else {
-            break_speed =  player.getDigSpeed(state, pos) / f / (ForgeHooks.isCorrectToolForDrops(state, player) ? 30 : 100);
+        if (player.getMainHandItem().getItem() instanceof TieredItem tiered) {
+            break_pass = canBreak.contains(tiered.getTier());
+            float f = state.getDestroySpeed(level, pos);
+            if (f == -1.0F) {
+                break_speed = 0;
+            } else {
+                break_speed = player.getDigSpeed(state, pos) / f / (tiered.isCorrectToolForDrops(player.getMainHandItem(), state) ? 30 : 100);
+            }
         }
 
         return break_pass ? 0.1f : break_speed;
