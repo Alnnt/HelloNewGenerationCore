@@ -10,7 +10,10 @@
     "cbc.MixinAutocannonBlockItem",
     "cbc.MixinBigCannonBaseBlock",
     "cbc.MixinBigCannonBlockItem",
-    "minecraft.MixinBlock"
+    "create.MixinBlazeBurnerBlock",
+    "create.MixinSchematicPlacePacket",
+    "minecraft.MixinBlock",
+    "sableschematicapi.MixinBlueprintToolServerActions",
   ],
   "client": [
   ],
