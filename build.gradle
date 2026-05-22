@@ -186,6 +186,10 @@ dependencies {
     implementation(files("libs/tracks-neoforge-1.21.1-1.0.1.jar"))
     implementation(files("libs/sable-schematic-api-0.2.6.jar"))
     implementation(files("libs/ldlib2-neoforge-1.21.1-2.2.8-all.jar"))
+    implementation(files("libs/createaddition-1.5.11.jar"))
+    compileOnly(files("libs/simulated-neoforge-1.21.1-1.2.1.jar"))
+    implementation(files("libs/sodium-neoforge-0.6.13+mc1.21.1.jar"))
+    implementation(files("libs/iris-neoforge-1.8.12+mc1.21.1.jar"))
 
 //    jarJar()
 }
