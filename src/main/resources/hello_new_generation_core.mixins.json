@@ -6,7 +6,7 @@
   "refmap": "power.refmap.json",
   "mixins": [
     "MixinDeployerBlockEntity",
-    "bvb.MixinAbstractLaserRenderer",
+    "createaeronautics.MixinAbstractLaserRenderer",
     "cbc.MixinAutocannonBaseBlock",
     "cbc.MixinAutocannonBlockItem",
     "cbc.MixinBigCannonBaseBlock",
@@ -14,8 +14,7 @@
     "create.MixinBlazeBurnerBlock",
     "create.MixinSchematicPlacePacket",
     "createaddition.MixinLiquidBlazeBurnerBlock",
-    "minecraft.MixinBlock",
-    "sableschematicapi.MixinBlueprintToolServerActions"
+    "minecraft.MixinBlock"
   ],
   "client": [
   ],

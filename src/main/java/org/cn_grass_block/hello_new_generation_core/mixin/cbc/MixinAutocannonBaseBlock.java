@@ -11,8 +11,9 @@ import rbasamoyai.createbigcannons.cannons.autocannon.AutocannonBaseBlock;
 
 @Mixin(AutocannonBaseBlock.class)
 public abstract class MixinAutocannonBaseBlock {
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         IBreakBaseBlock.playerWillDestroy(level, pos, state, player);
+        return state;
     }
 
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
