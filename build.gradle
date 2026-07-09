@@ -204,6 +204,17 @@ dependencies {
     // especially once the bellows is physicalized by Sable).
     compileOnly(files("libs/supplementaries-neoforge-1.21.1-3.6.6.jar"))
 
+    // Strut Your Stuff - compileOnly: provided at runtime by the modpack (required dependency of Bits 'n' Bobs).
+    // Referenced to patch GirderStrutStructureShapes$ShapeRegistry.unregisterConnection which calls
+    // getBlockState on cross-chunk positions during chunk unload, force-loading chunks and deadlocking the
+    // server thread under C2ME's async chunk system.
+    compileOnly(files("libs/struts-1.2.5.jar"))
+
+    // 通达铁路 (TongDa Railway) - compileOnly: provided at runtime by the modpack.
+    // Referenced to read station generation coordinates (StationTemplate / RailwayFeature.placeStation)
+    // for town-around-station linked worldgen.
+    compileOnly(files("libs/tongdarailway-1.1.3.jar"))
+
 //    jarJar()
 }
 
